@@ -1,0 +1,25 @@
+Sub maxsal()
+Max = Range("D2").Value
+For i = 2 To 10
+    If Range("D" & i).Value > Max Then
+        Max = Range("D" & i).Value
+    End If
+Next i
+MsgBox ("salaire max = " & Max)
+End Sub
+
+Sub minsal()
+Min = Range("D2").Value
+For i = 2 To 10
+    If Range("D" & i).Value < Min Then
+        Min = Range("D" & i).Value
+    End If
+Next i
+MsgBox ("salaire min = " & Min)
+End Sub
+
+
+Private Sub CommandButton1_Click()
+Gestion.maxsal
+Gestion.minsal
+End Sub
